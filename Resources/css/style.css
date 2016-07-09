@@ -1,0 +1,293 @@
+/* Background Selection - Deprecated */
+::selection { background: #111; color: #333; text-shadow: none; }
+::-moz-selection { background: #111; color: #333; text-shadow: none; }
+
+html, body
+{
+	height:100%;
+}
+body
+{
+	width: 100%;
+	background: #0C0C0C url(../images/camogrid.png) no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	overflow: hidden;
+	font-family: 'LeagueGothicRegular', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	color:#F4F4EA;
+}
+#header
+{
+	position: absolute;
+	z-index: 100;
+	width: 235px;
+	top: 50px;
+}
+#header h1
+{
+	font-size: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color:#F4F4EA;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+	padding: 20px;
+	background: #000;
+	/* Transformation: */
+	-o-transition:color 0.2s ease-out, background 2s ease-in;
+	-ms-transition:color 0.2s ease-out, background 2s ease-in;
+	-moz-transition:color 0.2s ease-out, background 2s ease-in;
+	-webkit-transition:color 0.2s ease-out, background 2s ease-in;
+	transition:color, border-right, 0.2s ease-out, background 2s ease-in;
+}
+#header h1:hover
+{
+	color: #EC1C23;
+	background:#0C0C0C;
+	border-right:5px solid #EC1C23;
+}
+#navigation
+{
+	margin-top: 20px;
+	width: 235px;
+	display:block;
+	list-style:none;
+	z-index:3;
+}
+#navigation a
+{
+	color: #333333;
+	display: block;
+	background: #090909;
+	line-height: 50px;
+	padding: 0px 20px;
+	text-transform: uppercase;
+	margin-bottom: 6px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	font-size: 20px;
+}
+#navigation a:hover
+{
+	background: #909090;
+	/* Transformation: */
+	-o-transition:color 0.2s ease-out, background 0.5s ease-in;
+	-ms-transition:color 0.2s ease-out, background 0.5s ease-in;
+	-moz-transition:color 0.2s ease-out, background 0.5s ease-in;
+	-webkit-transition:color 0.2s ease-out, background 0.5s ease-in;
+	transition:color, border-right, 0.2s ease-out, background 0.5s ease-in;
+}
+.content
+{
+	right: 40px;
+	left: 280px;
+	top: 0px;
+	position: absolute;
+	padding-bottom: 30px;
+}
+.content h2
+{
+	font-size: 90px;
+	text-transform: uppercase;
+	padding: 10px 0px 20px 0px;
+	margin-top: 50px;
+	color: #F4F4EA;
+/*	color: rgba(255,255,255,0.9); */
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+}
+
+
+.content p a, p a:visited
+{
+	color: #909090;
+	border-left:0px solid #000000; /* Fade in from nothing. */
+	/* Transformation: */
+	-o-transition:color 0.2s ease-out, background 2s ease-in;
+	-ms-transition:color 0.2s ease-out, background 2s ease-in;
+	-moz-transition:color 0.2s ease-out, background 2s ease-in;
+	-webkit-transition:color 0.2s ease-out, background 2s ease-in;
+	transition:box-shadow,border-left 0.2s ease-out, background 2s ease-in;
+}
+.content p a:hover
+{
+	color: #EC1C23;
+	background:#0C0C0C;
+	border-left:5px solid #EC1C23;
+}
+.content ul a, a:visited
+{
+	text-transform:uppercase;
+	color: #909090;
+	font-size: 24px;
+	border-left:0px solid #000000; /* Fade in from nothing. */
+	/* Transformation: */
+	-o-transition:color 0.2s ease-out, background 2s ease-in;
+	-ms-transition:color 0.2s ease-out, background 2s ease-in;
+	-moz-transition:color 0.2s ease-out, background 2s ease-in;
+	-webkit-transition:color 0.2s ease-out, background 2s ease-in;
+	transition:box-shadow,border-left 0.2s ease-out, background 2s ease-in;
+}
+.content ul a:hover
+{
+	color: #EC1C23;
+	background:#0C0C0C;
+	border-left:5px solid #EC1C23;
+}
+
+.content p
+{
+	font:13px/1.4 'Segoe UI', 'Myriad Pro', sans-serif;
+	text-transform:uppercase;
+	font-size: 18px;
+	line-height: 24px;
+	color: #F4F4EA;
+	display: inline-block;
+	background: #090909;
+	padding: 10px;
+	margin: 3px 0px;
+}
+.panel
+{
+	min-width: 100%;
+	height: 98%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	margin-top: -150%;
+	opacity: 0;
+	z-index:2;
+	-webkit-transition: opacity 0.6s ease-in-out;
+	-moz-transition: opacity 0.6s ease-in-out;
+	-o-transition: opacity 0.6s ease-in-out;
+	-ms-transition: opacity 0.6s ease-in-out;
+	transition: opacity 0.6s ease-in-out;
+}
+.panel:target
+{
+	opacity: 1;
+	margin-top: 0%;
+}
+
+#bio:target ~ #header #navigation #link-bio,
+#resume:target ~ #header #navigation #link-resume,
+#connect:target ~ #header #navigation #link-connect
+{
+	background: #020202;
+	color: #F4F4EA;
+}
+#documents
+{
+	padding: 15px 0px;
+}
+#documents li
+{
+	display: inline;
+}
+#documents li a
+{
+	padding-right: 10px;
+}
+#documents img
+{
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+	padding: 12px; 
+	background: rgba(255,255,255,0.9);
+}
+
+/* ------------------------------ */
+/* Fonts 						  */
+/* ------------------------------ */
+@font-face
+{
+    font-family: 'LeagueGothicRegular';
+    src: url('../fonts/League-Gothic-fontfacekit/League_Gothic-webfont.eot');
+    src: url('../fonts/League-Gothic-fontfacekit/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/League-Gothic-fontfacekit/League_Gothic-webfont.woff') format('woff'),
+         url('../fonts/League-Gothic-fontfacekit/League_Gothic-webfont.ttf') format('truetype'),
+         url('../fonts/League-Gothic-fontfacekit/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ------------------------------ */
+/* CSS reset                      */
+/* ------------------------------ */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td 
+{ 
+	margin:0;
+	padding:0;
+}
+html,body
+{
+	margin:0;
+	padding:0;
+}
+table
+{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img
+{ 
+	border:0;
+}
+input
+{
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+address, caption, cite, code, dfn, th, var
+{
+	font-style:normal;
+	font-weight:normal;
+}
+ol, ul
+{
+	list-style:none;
+}
+caption, th
+{
+	text-align:left;
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-size:100%;
+	font-weight:normal;
+}
+q:before, q:after
+{
+	content:'';
+}
+abbr, acronym
+{
+    border:0;
+}
+
+/* General Demo Style */
+a
+{
+	text-decoration: none;
+}
+@-webkit-keyframes slideOut{
+	0%{top:-30px; opacity: 0;}
+	100%{top:0px; opacity: 1;}
+}
+@-moz-keyframes slideOut{
+	0%{top:-30px; opacity: 0;}
+	100%{top:0px; opacity: 1;}
+}
+@-o-keyframes slideOut{
+	0%{top:-30px; opacity: 0;}
+	100%{top:0px; opacity: 1;}
+}
+@-ms-keyframes slideOut{
+	0%{top:-30px; opacity: 0;}
+	100%{top:0px; opacity: 1;}
+}
+@keyframes slideOut{
+	0%{top:-30px; opacity: 0;}
+	100%{top:0px; opacity: 1;}
+}
